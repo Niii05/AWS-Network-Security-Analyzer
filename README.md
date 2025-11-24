@@ -25,8 +25,7 @@ IAM roles for secure, permission-limited access
 
 
 📂 Project Structure
-AWS-Network-Security-Analyzer/
-│
+ AWS-Network-Security-Analyzer
 ├── lambda/
 │   └── flowlog_analyzer.py
 ├── docs/
