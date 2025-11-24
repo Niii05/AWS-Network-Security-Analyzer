@@ -1,47 +1,78 @@
+🚀 AWS Network Security Analyzer
 
-# AWS-Network-Security-Analyzer
+Serverless AWS solution that analyzes VPC Flow Logs and triggers real-time security alerts using Lambda & SNS.
 
-Automated AWS VPC Flow Log analyzer using Lambda + SNS alerts.
 
-## Overview
-This project analyzes VPC Flow Logs in AWS using a Lambda function. Alerts are sent via SNS when suspicious traffic patterns are detected. The goal is to monitor network traffic patterns and get automated notifications for unusual activities.
+🔥 Overview
 
-## Project Structure
+This project monitors AWS VPC network traffic using VPC Flow Logs.
+A Lambda function analyzes logs for suspicious activity (denies, unusual ports, repeated failures) and sends alerts via SNS.
 
-- lambda/
-  - flowlog_analyzer.py  # Main Lambda function code
-- docs/
-  - flowlogs_screenshot.png
-  - architecture_diagram.png
-- README.md
-- requirements.txt
-- LICENSE
+Designed for cloud security, network monitoring, and AWS automation.
 
-## Setup Instructions
 
-1. Create an S3 bucket to store flow logs.
-2. Enable VPC Flow Logs in AWS for your VPCs.
-3. Deploy the Lambda function (`flowlog_analyzer.py`) using the AWS Console, CLI, or CloudFormation.
-4. Configure an SNS topic for notifications.
-5. Update the Lambda environment variables as needed (e.g., bucket name, SNS topic ARN).
+🏗️ Architecture
 
-## Dependencies
+VPC Flow Logs → CloudWatch
 
-- boto3 (already available in AWS Lambda)
-- Add any additional Python packages to `requirements.txt` if needed.
+Lambda Analyzer (Python) processes flow logs
 
-## Security
+SNS Email Alerts for high-risk traffic
 
-- **Do NOT** put AWS credentials in the code.  
-- Use IAM roles and environment variables for secure access.
+IAM roles for secure, permission-limited access
 
-## Docs
+(Screenshots + architecture diagram included in /docs)
 
-- [Flow Logs Screenshot](docs/flowlogs_screenshot.png)
-- [SNS Email Screenshot](docs/sns_email_screenshot.png)
-- [Architecture Diagram](docs/architecture_diagram.png)
-- [Lambda Configuration](docs/lambda_configuration.png)
-- [Lambda Flow Logs](docs/lambda_flowlogs.png)          # optional
-- [Lambda CloudWatch Logs](docs/lambda_cloudwatch_logs.png)  # optional
 
-- Architecture diagram and screenshots are stored in the `docs/` folder.
+📂 Project Structure
+AWS-Network-Security-Analyzer/
+│
+├── lambda/
+│   └── flowlog_analyzer.py
+├── docs/
+│   ├── architecture_diagram.png
+│   ├── flowlogs_screenshot.png
+│   └── sns_alert_screenshot.png
+├── README.md
+├── requirements.txt
+└── LICENSE
+
+
+⚙️ Setup
+
+Enable VPC Flow Logs (send to CloudWatch).
+
+Create SNS Topic → Email Subscription.
+
+Create Lambda Function → Add IAM Role → Add environment variables.
+
+Upload flowlog_analyzer.py.
+
+Test with sample traffic (ACCEPT/REJECT events).
+
+
+🔐 Security Best Practices
+
+No credentials in code
+
+IAM least-privilege
+
+Environment variables for configuration
+
+Logging + monitoring enabled
+
+
+🧩 Use Cases
+
+Detect suspicious inbound/outbound activity
+
+Monitor rejected traffic
+
+Automate cloud security notifications
+
+Improve AWS network visibility
+
+
+⭐ Keywords (SEO)
+
+AWS • VPC • Flow Logs • Cloud Security • Network Monitoring • Lambda • SNS • CloudWatch • Python • Security Automation
