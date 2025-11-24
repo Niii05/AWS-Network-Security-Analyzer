@@ -36,5 +36,13 @@ This project analyzes VPC Flow Logs in AWS using a Lambda function. Alerts are s
 - Use IAM roles and environment variables for secure access.
 
 ## Docs
+## Docs
+
+- [Flow Logs Screenshot](docs/flowlogs_screenshot.png)
+- [SNS Email Screenshot](docs/sns_email_screenshot.png)
+- [Architecture Diagram](docs/architecture_diagram.png)
+- [Lambda Configuration](docs/lambda_configuration.png)
+- [Lambda Flow Logs](docs/lambda_flowlogs.png)          # optional
+- [Lambda CloudWatch Logs](docs/lambda_cloudwatch_logs.png)  # optional
 
 - Architecture diagram and screenshots are stored in the `docs/` folder.
