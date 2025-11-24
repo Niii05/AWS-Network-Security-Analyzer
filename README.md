@@ -36,7 +36,6 @@ This project analyzes VPC Flow Logs in AWS using a Lambda function. Alerts are s
 - Use IAM roles and environment variables for secure access.
 
 ## Docs
-## Docs
 
 - [Flow Logs Screenshot](docs/flowlogs_screenshot.png)
 - [SNS Email Screenshot](docs/sns_email_screenshot.png)
