@@ -36,6 +36,12 @@ IAM roles for secure, permission-limited access
 ├── requirements.txt
 └── LICENSE
 
+# Architecture Diagram 
+![Architecture](docs/docs_Architecture_daigram.png)
+
+# Screenshots 
+![SNS](docs/SNS.png)
+
 
 ⚙️ Setup
 
